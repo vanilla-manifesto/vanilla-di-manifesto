@@ -29,7 +29,7 @@ Supported Languages
 
 We provide examples for the languages:
 
-- JavaScript
+- [JavaScript](./js/)
 
 However, we're always welcome to add examples for other languages above.
 Feel free to send a pull request.
