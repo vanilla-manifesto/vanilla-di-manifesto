@@ -1,6 +1,8 @@
 Vanilla DI manifesto
 ====================
 
+[![CircleCI](https://circleci.com/gh/vanilla-manifesto/vanilla-di-manifesto/tree/master.svg?style=svg)](https://circleci.com/gh/vanilla-manifesto/vanilla-di-manifesto/tree/master)
+
 Vanilla DI is one of the implementation approach of [Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection).
 And also, Vanilla DI is an approach of design.
 
@@ -31,6 +33,7 @@ We provide examples for the languages:
 
 - [JavaScript](./js/)
 - [TypeScript](./ts/)
+- [Swift](./swift/)
 
 However, we're always welcome to add examples for other languages above.
 Feel free to send a pull request.
