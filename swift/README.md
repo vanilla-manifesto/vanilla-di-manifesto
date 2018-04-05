@@ -51,7 +51,7 @@ class Z {
 
 
     func doSomething() {
-        let (x, y) = this.dependency;
+        let (x, y) = self.dependency;
 
         // Do something with x and y.
     }
@@ -140,12 +140,14 @@ class FooBarUser {
 #### Injection Example
 
 ```swift:Main.swift
-const fooBarUser = new FooBarUser({
-    foo: new Foo(),
-    bar: new Bar(),
-});
+let fooBarUser = FooBarUser(
+    dependency: (
+        foo: FooConst(),
+        bar: BarNull()
+    )
+)
 
-fooBarUser.danceWithDependencies();
+fooBarUser.danceWithDependencies()
 ```
 
 
