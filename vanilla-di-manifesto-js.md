@@ -4,7 +4,7 @@ JavaScript with Vanilla DI
 Vanilla DI is one of the implementation approach of [Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection).
 And also, Vanilla DI is an approach of design.
 
-This approach have the following advantages:
+This approach has the following advantages:
 
 - Extremely simple
 - Extremely easy to use
@@ -14,7 +14,7 @@ This approach have the following advantages:
 - Good portability for most languages
 - Good way to layered architecture
 
-For fairness, this approach have the following disadvantages:
+For fairness, this approach has the following disadvantages:
 
 - Can't follow completly to DRY
 - Maintainability highly depend to design skill
@@ -26,7 +26,7 @@ But using Vanilla DI is still a good choice for many situations.
 Usage
 -----
 
-This approach is extremely simple; **Inject depended components via the dependent constructor**.
+This approach is extremely simple; **Inject components via the constructors**.
 
 You can achieve it by writing code like the following for each dependent components:
 
@@ -178,7 +178,7 @@ Of course, nothing.
 Key Things
 ----------
 
-There are 2 key things to be use easily this approach:
+There are 2 key things to use easily this approach:
 
 - Command-Query Separation
 - Single Responsibility Prinsible
@@ -187,14 +187,14 @@ There are 2 key things to be use easily this approach:
 ### Command-Query Separation
 
 Command-Query Separation (CQS) is a principle of design.
-Vanilla DI become hard to use if you don't follow the principle.
+Vanilla DI becomes hard to use if you don't follow the principle.
 
 
 
 ### Single Responsibility Prinsiple
 
 Single Responsibility Principle (SRP) is also a principle of design.
-Vanilla DI become hard to maintain if you don't follow the principle.
+Vanilla DI becomes hard to maintain if you don't follow the principle.
 
 
 
