@@ -2,6 +2,17 @@
 set -o pipefail
 
 (cd $(dirname $0)
-	(cd js/example; npm test)
-	(cd ts/example; npm test)
+	echo "=== BEGIN: JavaScript ==="
+	(cd js/example
+		npm install
+		npm test
+	)
+	echo "=== END: JavaScript ==="
+
+	echo "=== BEGIN: TypeScript ==="
+	(cd ts/example
+		npm install
+		npm test
+	)
+	echo "=== END: TypeScript ==="
 )
