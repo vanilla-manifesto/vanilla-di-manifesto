@@ -1,0 +1,35 @@
+{
+  "name": "vanilla-di-example",
+  "version": "1.0.0",
+  "description": "Example project with Vanilla DI",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf 'lib/**/*.mjs'",
+    "prebuild": "npm run clean",
+    "build": "npm-run-all build:tsc build:mjs",
+    "build:tsc": "tsc",
+    "build:mjs": "renamer --find '.js' --replace '.mjs' './lib/**/*.js'",
+    "pretest": "npm run build",
+    "test": "node --experimental-modules lib/test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanilla-manifesto/vanilla-di-manifesto.git"
+  },
+  "keywords": [
+    "DI"
+  ],
+  "author": "Kuniwak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vanilla-manifesto/vanilla-di-manifesto/issues"
+  },
+  "homepage": "https://github.com/vanilla-manifesto/vanilla-di-manifesto#readme",
+  "dependencies": {
+    "@types/node": "^9.6.2",
+    "npm-run-all": "^4.1.2",
+    "renamer": "^0.6.1",
+    "rimraf": "^2.6.2",
+    "typescript": "^2.8.1"
+  }
+}

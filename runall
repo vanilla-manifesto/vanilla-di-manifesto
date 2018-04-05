@@ -2,5 +2,6 @@
 set -o pipefail
 
 (cd $(dirname $0)
-	(cd js; npm test)
+	(cd js/example; npm test)
+	(cd ts/example; npm test)
 )
