@@ -1,13 +1,12 @@
 export class FooBarUser {
   constructor(dependency) {
-    const {foo, bar} = dependency;
-    this.foo = foo;
-    this.bar = bar;
+    this.dependency = dependency;
   }
 
 
   danceWithDependencies() {
-    const fooValue = this.foo.getSomething();
-    this.bar.doSomething(fooValue);
+    const {foo, bar} = this.dependency;
+    const fooValue = foo.getSomething();
+    bar.doSomething(fooValue);
   }
 }

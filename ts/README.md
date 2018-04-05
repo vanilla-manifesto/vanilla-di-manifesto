@@ -1,4 +1,4 @@
-JavaScript with Vanilla DI
+TypeScript with Vanilla DI
 ==========================
 
 Vanilla DI is one of the implementation approach of [Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection).
@@ -31,16 +31,20 @@ This approach is extremely simple; **Inject components via the constructors**.
 
 You can achieve it by writing code like the following for each dependent components:
 
-```javascript
+```typescript
 // These are depended components.
 class X {}
 class Y {}
 
+// This is a declaration of direct dependencies.
+interface ZDependency {
+  x: X;
+  y: Y;
+}
+
 // This is a dependent component.
 class Z {
-  constructor(dependency) {
-	const dependency = dependency;
-  }
+  constructor(private dependency: ZDependency) {}
 
   doSomething() {
     const {x, y} = this.dependency;
@@ -69,46 +73,68 @@ Example
 ### Production
 #### Depended Components Example
 
-```javascript:foo.mjs
-export class Foo {
-  getSomething() {
+```typescript:foo.ts
+export interface Foo {
+  getSomething(): number;
+}
+
+
+// The name of concrete classes should represent its behavior.
+// For ecample, this class return always 42, so we can name it as "-Const".
+// But you can still name as "-Impl" or "-Default" if there are no ways.
+export class FooConst implements Foo {
+  getSomething(): number {
     return 42;
   }
 }
 ```
 
-```javascript:bar.mjs
-export class Bar {
-  doSomething(value) {
-    // Execute something have side-effects
+```typescript:bar.ts
+export interface Bar {
+  doSomething(value: number): void;
+}
+
+
+// The name of concrete classes should represent its behavior.
+// For ecample, this class do nothing, so we can name it as "-Null".
+// But you can still name as "-Impl" or "-Default" if there are no ways.
+export class BarNull implements Bar {
+  doSomething(value: number): void {
+    // Do something.
   }
 }
 ```
 
 #### Dependent Components Example
 
-```javascript:foo_bar_user.mjs
+```typescript:foo_bar_user.ts
+import {Foo} from "./foo";
+import {Bar} from "./bar";
+
+
+export interface FooBarUserDependency {
+  foo: Foo;
+  bar: Bar;
+}
+
+
 export class FooBarUser {
-  constructor(dependency) {
-    const {foo, bar} = dependency;
-    this.foo = foo;
-    this.bar = bar;
-  }
+  constructor(private dependency: FooBarUserDependency) {}
 
 
   danceWithDependencies() {
-    const fooValue = this.foo.getSomething();
-    this.bar.doSomething(fooValue);
+    const fooValue = this.dependency.foo.getSomething();
+    this.dependency.bar.doSomething(fooValue);
   }
 }
 ``` 
 
 #### Injection Example
 
-```javascript:index.mjs
+```typescript:index.ts
 const fooBarUser = new FooBarUser({
-  foo: new Foo(),
-  bar: new Bar(),
+  foo: new FooConst(),
+  bar: new BarNull(),
 });
 
 fooBarUser.danceWithDependencies();
@@ -124,37 +150,39 @@ You can use Vanilla DI with any testing frameworks you like.
 
 #### Test Doubles Example
 
-```javascript:foo_stub.mjs
-export class FooStub {
-  constructor(firstValue) {
-    this.nextValue = firstValue;
-  }
+```typescript:foo_stub.ts
+import {Foo} from "./foo";
 
 
-  getSomething() {
+export class FooStub implements Foo {
+  constructor(public nextValue: number) {}
+
+  getSomething(): number {
     return this.nextValue;
   }
 }
 ```
 
-```javascript:bar_spy.js
-export class BarSpy {
-  constructor() {
-    this.calledArgs = [];
-  }
+```typescript:bar_spy.js
+import {Bar} from "./bar";
 
 
-  doSomething(value) {
+export class BarSpy implements Bar {
+  readonly calledArgs: number[] = [];
+
+
+  doSomething(value: number): void {
     this.calledArgs.push(value);
   }
 }
+
 ```
 
 
 
 #### Test Case Example
 
-```javascript
+```typescript
 const barSpy = new BarSpy();
 
 const fooBarUser = new FooBarUser({
@@ -202,7 +230,7 @@ Vanilla DI becomes hard to maintain if you don't follow the principle.
 FQA
 ---
 
-### X is the de facto library of JavaScript. So we should use it, right?
+### X is the de facto library of TypeScript. So we should use it, right?
 
 Yes and no. It completely depends to your situation.
 
