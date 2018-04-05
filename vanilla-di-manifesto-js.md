@@ -19,6 +19,7 @@ For fairness, this approach has the following disadvantages:
 - Can't follow completly to DRY
 - Maintainability highly depend to design skill
 
+So, Vanilla DI may not work well if you work on a huge project.
 But using Vanilla DI is still a good choice for many situations.
 
 
