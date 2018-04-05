@@ -1,9 +1,38 @@
+---
 version: 2
+workflows:
+  version: 2
+  test_all:
+    jobs:
+      - js
+      - ts
+      - swift
+
 jobs:
-  build:
-    docker: 
+  js:
+    docker:
       - image: circleci/node:8.11.1
-    working_directory: ~/vanilla-di-manifesto
     steps:
       - checkout
-      - run: ./runall
+      - run: |
+          cd ~/project/js/example
+          npm install
+          npm test
+  ts:
+    docker:
+      - image: circleci/node:8.11.1
+    steps:
+      - checkout
+      - run: |
+          cd ~/project/ts/example
+          npm install
+          npm test
+  swift:
+    docker:
+      - image: kylef/swiftenv:1
+    steps:
+      - checkout
+      - run: |
+          cd ~/project/swift/example
+          swiftenv install
+          swift test
