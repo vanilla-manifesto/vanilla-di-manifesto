@@ -3,7 +3,7 @@ Vanilla DI manifesto
 
 [![CircleCI](https://circleci.com/gh/vanilla-manifesto/vanilla-di-manifesto/tree/master.svg?style=svg)](https://circleci.com/gh/vanilla-manifesto/vanilla-di-manifesto/tree/master)
 
-Vanilla DI is one of the implementation approach of [Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection).
+Vanilla DI is one of the implementation approaches of [Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection).
 And also, Vanilla DI is an approach of design.
 
 This approach has the following advantages:
@@ -19,7 +19,7 @@ This approach has the following advantages:
 For fairness, this approach has the following disadvantages:
 
 - Can't follow completly to DRY
-- Maintainability highly depends to design skill
+- Maintainability highly depends on design skill
 
 So, Vanilla DI may not work well if you work on a huge project.
 But using Vanilla DI is still a good choice for many situations.
@@ -35,7 +35,7 @@ We provide examples for the languages:
 - [TypeScript](./ts/)
 - [Swift](./swift/)
 
-However, we're always welcome to add examples for other languages above.
+However, we always welcome to add examples for other languages above.
 Feel free to send a pull request.
 
 
@@ -85,7 +85,7 @@ Key Things
 There are 2 key things to use easily this approach:
 
 - Command-Query Separation
-- Single Responsibility Prinsible
+- Single Responsibility Prinsiple
 
 
 ### Command-Query Separation
