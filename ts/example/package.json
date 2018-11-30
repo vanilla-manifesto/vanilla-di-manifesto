@@ -26,10 +26,10 @@
   },
   "homepage": "https://github.com/vanilla-manifesto/vanilla-di-manifesto#readme",
   "dependencies": {
-    "@types/node": "^9.6.2",
-    "npm-run-all": "^4.1.2",
+    "@types/node": "^9.6.40",
+    "npm-run-all": "^4.1.5",
     "renamer": "^0.6.1",
     "rimraf": "^2.6.2",
-    "typescript": "^2.8.1"
+    "typescript": "^2.9.2"
   }
 }
