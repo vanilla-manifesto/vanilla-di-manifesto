@@ -8,18 +8,27 @@ And also, Vanilla DI is an approach of design.
 
 This approach has the following advantages:
 
-- Extremely simple
-- Extremely easy to use
-- Dependency-free
-- Good debuggability
-- Good readability for beginners
-- Good portability for most languages
-- Good way to layered architecture
+<dl>
+<dt>Advantages</dt>
+<dd><ul>
+<li>Extremely simple</li>
+<li>Extremely easy to use</li>
+<li>Dependency-free</li>
+<li>Good debuggability</li>
+<li>Good readability for beginners</li>
+<li>Good portability for most languages</li>
+<li>Good way to layered architecture</li>
+</ul></dd>
+</dl>
 
 For fairness, this approach has the following disadvantages:
 
-- Can't follow completly to DRY
-- Maintainability highly depends on design skill
+<dl>
+<dt>Disadvantages</dt>
+<dd><ul>
+<li>Maintainability highly depends on design skill</li>
+</ul></dd>
+</dl>
 
 So, Vanilla DI may not work well if you work on a huge project.
 But using Vanilla DI is still a good choice for many situations.
