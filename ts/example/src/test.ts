@@ -18,6 +18,8 @@ import {BarSpy} from "./bar_spy";
 })();
 
 
+// NOTE: This is an example test code that not depended any test frameworks.
+//       You may use test frameworks you like.
 (function test() {
   const barSpy = new BarSpy();
 

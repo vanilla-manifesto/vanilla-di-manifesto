@@ -10,7 +10,7 @@ This approach has the following advantages:
 
 - Extremely simple
 - Extremely easy to use
-- Zero dependency
+- Dependency-free
 - Good debuggability
 - Good readability for beginners
 - Good portability for most languages
@@ -34,6 +34,8 @@ We provide examples for the languages:
 - [JavaScript](./js/)
 - [TypeScript](./ts/)
 - [Swift](./swift/)
+<!-- TODO: C# -->
+<!-- TODO: Go -->
 
 However, we always welcome to add examples for other languages above.
 Feel free to send a pull request.
@@ -43,7 +45,7 @@ Feel free to send a pull request.
 Concept
 -------
 
-This approach is extremely simple; **Inject depended components via constructors**.
+This approach is extremely simple; **Inject depended components via constructors** (this approach is known as [Constructor Injection](http://xunitpatterns.com/Dependency%20Injection.html#Constructor%20Injection)).
 
 You can achieve it by writing code like the following for each dependent components:
 
@@ -84,8 +86,8 @@ Key Things
 
 There are 2 key things to use easily this approach:
 
-- Command-Query Separation
-- Single Responsibility Prinsiple
+- [Command-Query Separation](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation)
+- [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)
 
 
 ### Command-Query Separation
