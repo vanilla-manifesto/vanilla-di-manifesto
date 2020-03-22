@@ -44,7 +44,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: swift test
+          command: swift test --enable-test-discovery
           working_directory: ./swift/example
 
   cs:
