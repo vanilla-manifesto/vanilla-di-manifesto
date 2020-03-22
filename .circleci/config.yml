@@ -64,6 +64,7 @@ jobs:
 workflows:
   test_all:
     jobs:
+      - readme
       - js
       - ts
       - swift
