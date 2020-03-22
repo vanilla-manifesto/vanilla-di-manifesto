@@ -1,5 +1,5 @@
 ---
-version: 2
+version: 2.1
 
 jobs:
   js:
@@ -36,7 +36,6 @@ jobs:
           working_directory: ./swift/example
 
 workflows:
-  version: 2
   test_all:
     jobs:
       - js
