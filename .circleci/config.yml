@@ -2,6 +2,19 @@
 version: 2.1
 
 jobs:
+  readme:
+    docker:
+      - image: circleci/node:13.10.1
+    steps:
+      - checkout
+      - run:
+          command: npm install
+          working_directory: ./tests
+      - run:
+          command: npm test
+          working_directory: ./tests
+
+
   js:
     docker:
       - image: circleci/node:13.10.1
