@@ -60,6 +60,15 @@ jobs:
           command: dotnet test
           working_directory: ./cs/example
 
+  go:
+    docker:
+      - image: circleci/golang:1.14
+    steps:
+      - checkout
+      - run:
+          command: go test ./... -v
+          working_directory: ./go/example
+
 
 workflows:
   test_all:
@@ -69,3 +78,4 @@ workflows:
       - ts
       - swift
       - cs
+      - go
