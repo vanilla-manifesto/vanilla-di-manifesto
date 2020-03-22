@@ -35,9 +35,23 @@ jobs:
           command: swift test
           working_directory: ./swift/example
 
+  cs:
+    docker:
+      - image: mcr.microsoft.com/dotnet/core/sdk:3.1
+    steps:
+      - checkout
+      - run:
+          command: dotnet restore
+          working_directory: ./cs/example
+      - run:
+          command: dotnet test
+          working_directory: ./cs/example
+
+
 workflows:
   test_all:
     jobs:
       - js
       - ts
       - swift
+      - cs
