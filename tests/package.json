@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "npm-run-all test:*",
+    "test:readme": "markdown-link-check ../README.md",
+    "test:js": "markdown-link-check ../js/README.md",
+    "test:ts": "markdown-link-check ../ts/README.md",
+    "test:swift": "markdown-link-check ../swift/README.md",
+    "test:cs": "markdown-link-check ../cs/README.md"
+  },
+  "dependencies": {
+    "markdown-link-check": "^3.8.0",
+    "npm-run-all": "^4.1.5"
+  }
+}
