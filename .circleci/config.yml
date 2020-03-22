@@ -59,6 +59,18 @@ jobs:
           command: dotnet test
           working_directory: ./cs/example
 
+  fs:
+    docker:
+      - image: mcr.microsoft.com/dotnet/core/sdk:3.1
+    steps:
+      - checkout
+      - run:
+          command: dotnet restore
+          working_directory: ./fs/example
+      - run:
+          command: dotnet test
+          working_directory: ./fs/example
+
   go:
     docker:
       - image: circleci/golang:1.14
@@ -95,5 +107,6 @@ workflows:
       - ts
       - swift
       - cs
+      - fs
       - go
       - py
