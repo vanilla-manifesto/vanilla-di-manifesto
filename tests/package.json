@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "test": "npm-run-all test:*",
+    "test:readme": "markdown-link-check ../README.md",
     "test:js": "markdown-link-check ../js/README.md",
     "test:ts": "markdown-link-check ../ts/README.md",
     "test:swift": "markdown-link-check ../swift/README.md",
