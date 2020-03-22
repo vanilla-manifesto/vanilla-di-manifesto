@@ -6,7 +6,8 @@
     "test:js": "markdown-link-check ../js/README.md",
     "test:ts": "markdown-link-check ../ts/README.md",
     "test:swift": "markdown-link-check ../swift/README.md",
-    "test:cs": "markdown-link-check ../cs/README.md"
+    "test:cs": "markdown-link-check ../cs/README.md",
+    "test:go": "markdown-link-check ../go/README.md"
   },
   "dependencies": {
     "markdown-link-check": "^3.8.0",
