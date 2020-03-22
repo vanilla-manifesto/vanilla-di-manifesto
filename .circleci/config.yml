@@ -28,13 +28,12 @@ jobs:
 
   swift:
     docker:
-      - image: kylef/swiftenv:1
+      - image: swift:5.1.5
     steps:
       - checkout
-      - run: |
-          cd ~/project/swift/example
-          swiftenv install
-          swift test
+      - run:
+          command: swift test
+          working_directory: ./swift/example
 
 workflows:
   version: 2
