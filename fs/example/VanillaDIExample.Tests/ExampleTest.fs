@@ -36,7 +36,7 @@ module WithObjectExpressions =
             { new IBar with
                 member __. DoSomething value = calledArgs.Add value }
 
-        let fooBarUser = FooBarUser(FooStub(1234), barSpy);
+        let fooBarUser = FooBarUser(fooStub, barSpy);
 
         fooBarUser.DanceWithDependencies();
 
