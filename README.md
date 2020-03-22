@@ -43,7 +43,7 @@ We provide examples for the languages:
 - [TypeScript](./ts/)
 - [Swift](./swift/)
 - [C#](./cs/)
-<!-- TODO: Go -->
+- [Go](./cs/)
 
 However, we always welcome to add examples for other languages above.
 Feel free to send a pull request.
