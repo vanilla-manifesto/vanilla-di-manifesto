@@ -1,4 +1,6 @@
-export class FooBarUser {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+class FooBarUser {
     constructor(dependency) {
         this.dependency = dependency;
     }
@@ -8,3 +10,4 @@ export class FooBarUser {
         bar.doSomething(fooValue);
     }
 }
+exports.FooBarUser = FooBarUser;

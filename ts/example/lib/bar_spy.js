@@ -1,4 +1,6 @@
-export class BarSpy {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+class BarSpy {
     constructor() {
         this.calledArgs = [];
     }
@@ -6,3 +8,4 @@ export class BarSpy {
         this.calledArgs.push(value);
     }
 }
+exports.BarSpy = BarSpy;
