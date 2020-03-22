@@ -1,0 +1,15 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+mypy = ">=0.770"
+
+[requires]
+python_version = "3.8"
+
+[scripts]
+test = "python3 -m unittest discover"

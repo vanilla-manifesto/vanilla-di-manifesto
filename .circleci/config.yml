@@ -69,6 +69,15 @@ jobs:
           command: go test ./... -v
           working_directory: ./go/example
 
+  py:
+    docker:
+      - image: circleci/python:3.8.1
+    steps:
+      - checkout
+      - run: sudo pip install pipenv
+      - run: pipenv install
+      - run: pipenv run test
+
 
 workflows:
   test_all:
@@ -79,3 +88,4 @@ workflows:
       - swift
       - cs
       - go
+      - py
