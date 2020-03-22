@@ -1,4 +1,4 @@
-Code Examples for JavaScript
+Code Examples for TypeScript
 ----------------------------
 
 * System under test: [`src/foo_bar_user.ts`](./example/src/foo_bar_user.ts)

@@ -1,5 +1,5 @@
-Code Examples for JavaScript
-----------------------------
+Code Examples for Go
+--------------------
 
 * System under test: [`foo_bar_user.go`](./example/foo_bar_user.go)
 * Depended-on Component:
