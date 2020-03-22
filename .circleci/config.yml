@@ -73,10 +73,18 @@ jobs:
       - image: circleci/python:3.8.1
     steps:
       - checkout
-      - run: sudo pip install pipenv
-      - run: pipenv install
-      - run: pipenv run typecheck
-      - run: pipenv run test
+      - run:
+          command: sudo pip install pipenv
+          working_directory: ./py/example
+      - run:
+          command: pipenv install
+          working_directory: ./py/example
+      - run:
+          command: pipenv run typecheck
+          working_directory: ./py/example
+      - run:
+          command: pipenv run test
+          working_directory: ./py/example
 
 
 workflows:
