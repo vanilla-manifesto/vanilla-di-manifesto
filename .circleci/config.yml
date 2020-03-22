@@ -14,7 +14,6 @@ jobs:
           command: npm test
           working_directory: ./tests
 
-
   js:
     docker:
       - image: circleci/node:13.10.1
@@ -69,6 +68,24 @@ jobs:
           command: go test ./... -v
           working_directory: ./go/example
 
+  py:
+    docker:
+      - image: circleci/python:3.8.1
+    steps:
+      - checkout
+      - run:
+          command: sudo pip install pipenv
+          working_directory: ./py/example
+      - run:
+          command: pipenv install
+          working_directory: ./py/example
+      - run:
+          command: pipenv run typecheck
+          working_directory: ./py/example
+      - run:
+          command: pipenv run test
+          working_directory: ./py/example
+
 
 workflows:
   test_all:
@@ -79,3 +96,4 @@ workflows:
       - swift
       - cs
       - go
+      - py
