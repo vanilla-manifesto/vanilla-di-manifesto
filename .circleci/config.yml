@@ -1,32 +1,31 @@
 ---
 version: 2
-workflows:
-  version: 2
-  test_all:
-    jobs:
-      - js
-      - ts
-      - swift
 
 jobs:
   js:
     docker:
-      - image: circleci/node:8.11.1
+      - image: circleci/node:13.10.1
     steps:
       - checkout
-      - run: |
-          cd ~/project/js/example
-          npm install
-          npm test
+      - run:
+          command: npm install
+          working_directory: ./js/example
+      - run:
+          command: npm test
+          working_directory: ./js/example
+
   ts:
     docker:
-      - image: circleci/node:8.11.1
+      - image: circleci/node:13.10.1
     steps:
       - checkout
-      - run: |
-          cd ~/project/ts/example
-          npm install
-          npm test
+      - run:
+          command: npm install
+          working_directory: ./ts/example
+      - run:
+          command: npm test
+          working_directory: ./ts/example
+
   swift:
     docker:
       - image: kylef/swiftenv:1
@@ -36,3 +35,11 @@ jobs:
           cd ~/project/swift/example
           swiftenv install
           swift test
+
+workflows:
+  version: 2
+  test_all:
+    jobs:
+      - js
+      - ts
+      - swift

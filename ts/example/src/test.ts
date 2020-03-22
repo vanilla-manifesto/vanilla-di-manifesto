@@ -15,6 +15,7 @@ import {BarSpy} from "./bar_spy";
   });
 
   fooBarUser.danceWithDependencies();
+  console.log("OK - product")
 })();
 
 
@@ -31,4 +32,5 @@ import {BarSpy} from "./bar_spy";
   fooBarUser.danceWithDependencies();
 
   assert.deepStrictEqual(barSpy.calledArgs, [1234]);
+  console.log("OK - test")
 })();

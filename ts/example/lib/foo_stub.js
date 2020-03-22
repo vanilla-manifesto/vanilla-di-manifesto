@@ -1,4 +1,6 @@
-export class FooStub {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+class FooStub {
     constructor(nextValue) {
         this.nextValue = nextValue;
     }
@@ -6,3 +8,4 @@ export class FooStub {
         return this.nextValue;
     }
 }
+exports.FooStub = FooStub;

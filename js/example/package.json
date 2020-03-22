@@ -4,7 +4,7 @@
   "description": "Example project with Vanilla DI",
   "private": true,
   "scripts": {
-    "test": "node --experimental-modules test.mjs"
+    "test": "node test.mjs"
   },
   "repository": {
     "type": "git",

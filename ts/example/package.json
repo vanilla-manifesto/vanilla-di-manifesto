@@ -6,11 +6,9 @@
   "scripts": {
     "clean": "rimraf 'lib/**/*.mjs'",
     "prebuild": "npm run clean",
-    "build": "npm-run-all build:tsc build:mjs",
-    "build:tsc": "tsc",
-    "build:mjs": "renamer --find '.js' --replace '.mjs' './lib/**/*.js'",
+    "build": "tsc",
     "pretest": "npm run build",
-    "test": "node --experimental-modules lib/test.mjs"
+    "test": "node lib/test.js"
   },
   "repository": {
     "type": "git",
@@ -27,8 +25,6 @@
   "homepage": "https://github.com/vanilla-manifesto/vanilla-di-manifesto#readme",
   "dependencies": {
     "@types/node": "^13.7.6",
-    "npm-run-all": "^4.1.5",
-    "renamer": "^1.1.4",
     "rimraf": "^3.0.2",
     "typescript": "^3.8.2"
   }

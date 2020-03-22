@@ -1,11 +1,11 @@
 import assert from 'assert';
 
-import {Foo} from './foo';
-import {Bar} from './bar';
-import {FooBarUser} from './foo_bar_user';
+import {Foo} from './foo.mjs';
+import {Bar} from './bar.mjs';
+import {FooBarUser} from './foo_bar_user.mjs';
 
-import {FooStub} from './foo_stub';
-import {BarSpy} from './bar_spy';
+import {FooStub} from './foo_stub.mjs';
+import {BarSpy} from './bar_spy.mjs';
 
 
 production();
