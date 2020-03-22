@@ -12,4 +12,5 @@ mypy = ">=0.770"
 python_version = "3.8"
 
 [scripts]
+typecheck = "mypy ./vanilladiexample"
 test = "python3 -m unittest discover"

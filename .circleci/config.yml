@@ -14,7 +14,6 @@ jobs:
           command: npm test
           working_directory: ./tests
 
-
   js:
     docker:
       - image: circleci/node:13.10.1
@@ -76,6 +75,7 @@ jobs:
       - checkout
       - run: sudo pip install pipenv
       - run: pipenv install
+      - run: pipenv run typecheck
       - run: pipenv run test
 
 
