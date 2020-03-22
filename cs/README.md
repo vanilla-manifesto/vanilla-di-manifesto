@@ -49,7 +49,7 @@ Code Examples
     * [`VanillaDIExample/Foo.cs`](./example/VanillaDIExample/Foo.cs)
     * [`VanillaDIExample/Bar.cs`](./example/VanillaDIExample/Bar.cs)
 * Tests: [`VanillaDIExample.Tests/ExampleTest.cs`](./example/VanillaDIExample.Tests/ExampleTest.cs)
-* Test Doubles ([Vanilla Mock](https://github.dena.jp/vanilla-manifesto/vanilla-mock-manifesto)):
+* Test Doubles ([Vanilla Mock](https://github.com/vanilla-manifesto/vanilla-mock-manifesto)):
     * [`VanillaDIExample.Tests/FooStub.cs`](./example/VanillaDIExample.Tests/FooStub.cs)
     * [`VanillaDIExample.Tests/BarSpy.cs`](./example/VanillaDIExample.Tests/BarSpy.cs)
 
