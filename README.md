@@ -94,7 +94,7 @@ Refactoring Guides of Typical Smells
 
 If you felt something hard to write constructors or tests, Vanilla DIer should find several design smells.
 
-Because the important part of Vanilla DI are sensitivity of design smells. 
+Because the most important part of Vanilla DI is keen sensitivity of design smells. 
 Vanilla DI does not hide any design smells, but DI containers can hides often them.
 
 
