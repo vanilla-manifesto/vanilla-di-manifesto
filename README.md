@@ -43,6 +43,7 @@ We provide examples for the languages:
 - [TypeScript](./ts/)
 - [Swift](./swift/)
 - [C#](./cs/)
+- [F#](./fs/)
 - [Go](./cs/)
 - [Python](./py/)
 
