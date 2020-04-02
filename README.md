@@ -44,7 +44,7 @@ We provide examples for the languages:
 - [Swift](./swift/)
 - [C#](./cs/)
 - [F#](./fs/)
-- [Go](./cs/)
+- [Go](./go/)
 - [Python](./py/)
 
 However, we always welcome to add examples for other languages above.
