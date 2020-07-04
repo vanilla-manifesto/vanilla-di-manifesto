@@ -98,6 +98,14 @@ jobs:
           command: pipenv run test
           working_directory: ./py/example
 
+  java:
+    docker:
+      - image: circleci/openjdk:11.0.3-jdk-stretch
+    steps:
+      - checkout
+      - run:
+          command: gradle test
+          working_directory: ./java/example
 
 workflows:
   test_all:
@@ -110,3 +118,4 @@ workflows:
       - fs
       - go
       - py
+      - java

@@ -46,6 +46,7 @@ We provide examples for the languages:
 - [F#](./fs/)
 - [Go](./go/)
 - [Python](./py/)
+- [Java](./java/)
 
 However, we always welcome to add examples for other languages above.
 Feel free to send a pull request.
