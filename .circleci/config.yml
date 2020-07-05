@@ -107,6 +107,15 @@ jobs:
           command: gradle test
           working_directory: ./java/example
 
+  kotlin:
+    docker:
+      - image: circleci/openjdk:11.0.3-jdk-stretch
+    steps:
+      - checkout
+      - run:
+          command: gradle test
+          working_directory: ./kotlin/example
+
 workflows:
   test_all:
     jobs:
@@ -119,3 +128,4 @@ workflows:
       - go
       - py
       - java
+      - kotlin

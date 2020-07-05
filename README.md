@@ -47,6 +47,7 @@ We provide examples for the languages:
 - [Go](./go/)
 - [Python](./py/)
 - [Java](./java/)
+- [Kotlin](./kotlin)
 
 However, we always welcome to add examples for other languages above.
 Feel free to send a pull request.
