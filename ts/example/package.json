@@ -25,7 +25,7 @@
   "homepage": "https://github.com/vanilla-manifesto/vanilla-di-manifesto#readme",
   "dependencies": {
     "@types/node": "^13.7.6",
-    "rimraf": "^3.0.2",
+    "rimraf": "^6.1.3",
     "typescript": "^3.8.2"
   }
 }
